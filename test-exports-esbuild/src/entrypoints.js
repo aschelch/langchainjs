@@ -34,6 +34,7 @@ import * as retrievers_document_compressors_chain_extract from "langchain/retrie
 import * as retrievers_hyde from "langchain/retrievers/hyde";
 import * as cache from "langchain/cache";
 import * as stores_file_in_memory from "langchain/stores/file/in_memory";
+import * as stores_message_in_memory from "langchain/stores/message/in_memory";
 import * as experimental_autogpt from "langchain/experimental/autogpt";
 import * as experimental_babyagi from "langchain/experimental/babyagi";
 import * as experimental_plan_and_execute from "langchain/experimental/plan_and_execute";

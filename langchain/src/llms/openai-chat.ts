@@ -52,6 +52,13 @@ export class OpenAIChat
     return ["stop", "signal", "timeout", "options"];
   }
 
+  get lc_secrets(): { [key: string]: string } | undefined {
+    return {
+      "0.openAIApiKey": "OPENAI_API_KEY",
+      "0.azureOpenAIApiKey": "AZURE_OPENAI_API_KEY",
+    };
+  }
+
   temperature = 1;
 
   topP = 1;
@@ -388,6 +395,12 @@ export class PromptLayerOpenAIChat extends OpenAIChat {
   promptLayerApiKey?: string;
 
   plTags?: string[];
+
+  get lc_secrets(): { [key: string]: string } | undefined {
+    return {
+      "0.promptLayerApiKey": "PROMPTLAYER_API_KEY",
+    };
+  }
 
   constructor(
     fields?: ConstructorParameters<typeof OpenAIChat>[0] & {
